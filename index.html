@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="app">
+      <div class="app-title">Password Generator</div>
+      <div class="password">
+        <div class="pass"></div>
+        <i class="fa-regular fa-paste"></i>
+      </div>
+      <div class="char-container">
+        <div class="length">
+          <span>Character Length</span>
+          <span class="sel-length">0</span>
+        </div>
+        <input class="in-range" type="range" name="" min="0" max="20" id="" />
+        <div class="boxes">
+          <div class="box">
+            <input
+              type="checkbox"
+              data-text="ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+              id="upper"
+              name="upper"
+            />
+            <label for="upper">Include Uppercase Letters</label>
+          </div>
+          <div class="box">
+            <input
+              type="checkbox"
+              id="lower"
+              data-text="abcdefghijklmnopqrstuvwxyz"
+              name="lower"
+            />
+            <label for="lower">Include Lower Letters</label>
+          </div>
+          <div class="box">
+            <input
+              type="checkbox"
+              id="number"
+              data-text="0123456789"
+              name="number"
+            />
+            <label for="number">Include Numbers</label>
+          </div>
+          <div class="box">
+            <input
+              type="checkbox"
+              id="symbol"
+              data-text="~!@#$%^&*()_-+"
+              name="symbol"
+            />
+            <label for="symbol">Include Symbols</label>
+          </div>
+        </div>
+        <div class="strength">
+          <span>Strength</span>
+          <div class="rate">
+            <span class="str">medium</span>
+            <div class="strength-icon">
+              <span class="SP1"></span>
+              <span class="SP2"></span>
+              <span class="SP3"></span>
+              <span class="SP4"></span>
+            </div>
+          </div>
+        </div>
+        <button class="g-btn">Generate</button>
+      </div>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
