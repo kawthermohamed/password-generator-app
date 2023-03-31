@@ -84,5 +84,9 @@ function passGeneration() {
     });
     passContent = [];
     generatedPass = "";
+    sp1.classList.remove("active");
+    sp2.classList.remove("active");
+    sp3.classList.remove("active");
+    sp4.classList.remove("active");
   };
 }
