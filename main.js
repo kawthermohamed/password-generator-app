@@ -45,21 +45,32 @@ function strenthttype(array) {
   if (array.length == 1) {
     strength.innerHTML = "Very Weak";
     sp1.classList.add("active");
+    sp2.classList.remove("active");
+    sp3.classList.remove("active");
+    sp4.classList.remove("active");
   } else if (array.length == 2) {
     strength.innerHTML = "Weak";
     sp1.classList.add("active");
     sp2.classList.add("active");
+    sp3.classList.remove("active");
+    sp4.classList.remove("active");
   } else if (array.length == 3) {
     strength.innerHTML = "Medium";
     sp1.classList.add("active");
     sp2.classList.add("active");
     sp3.classList.add("active");
+    sp4.classList.remove("active");
   } else if (array.length == 4) {
     strength.innerHTML = "Good";
     sp1.classList.add("active");
     sp2.classList.add("active");
     sp3.classList.add("active");
     sp4.classList.add("active");
+  } else {
+    sp1.classList.remove("active");
+    sp2.classList.remove("active");
+    sp3.classList.remove("active");
+    sp4.classList.remove("active");
   }
 }
 //generate btn onclick
@@ -84,9 +95,16 @@ function passGeneration() {
     });
     passContent = [];
     generatedPass = "";
-    sp1.classList.remove("active");
-    sp2.classList.remove("active");
-    sp3.classList.remove("active");
-    sp4.classList.remove("active");
   };
 }
+
+//copy btn on click
+let copyBtn = document.querySelector("i");
+copyBtn.onclick = function () {
+  let copyText = document.querySelector(".pass").innerHTML;
+  // Copy the text inside the text field
+  navigator.clipboard.writeText(copyText);
+
+  // Alert the copied text
+  alert("Copied the text: " + copyText);
+};
